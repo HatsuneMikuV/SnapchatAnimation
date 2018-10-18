@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.dataArr = @[@"左右滑动切换", @"向下滑动消失"];
+    self.dataArr = @[@"左右滑动切换", @"向下滑动消失", @"左右切换向下消失"];
     
     [self setSubviews];
 }
