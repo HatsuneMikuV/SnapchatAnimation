@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.dataArr = @[@"", @""];
+    self.dataArr = @[@"左右滑动切换", @"向下滑动消失"];
     
     [self setSubviews];
 }
@@ -48,8 +48,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row < self.dataArr.count) {
-        
-        [self.navigationController presentViewController:[[ListViewController alloc] init] animated:YES completion:nil];
+        ListViewController *listVC = [[ListViewController alloc] init];
+        [self.navigationController presentViewController:listVC animated:YES completion:nil];
     }
 }
 #pragma mark -

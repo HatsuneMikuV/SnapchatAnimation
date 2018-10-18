@@ -16,6 +16,8 @@
 		E793E38E217861780038926D /* SnapChatAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E38D217861780038926D /* SnapChatAnimationTests.m */; };
 		E793E399217861780038926D /* SnapChatAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E398217861780038926D /* SnapChatAnimationUITests.m */; };
 		E793E3A8217863250038926D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3A7217863250038926D /* ListViewController.m */; };
+		E793E3AE217885150038926D /* AnimationCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3AD217885150038926D /* AnimationCollectionViewFlowLayout.m */; };
+		E793E3B1217892DB0038926D /* SHInteractiveAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3B0217892DB0038926D /* SHInteractiveAnimatedTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		E793E39A217861780038926D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E793E3A6217863250038926D /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		E793E3A7217863250038926D /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		E793E3AC217885150038926D /* AnimationCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		E793E3AD217885150038926D /* AnimationCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		E793E3AF217892DB0038926D /* SHInteractiveAnimatedTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHInteractiveAnimatedTransition.h; sourceTree = "<group>"; };
+		E793E3B0217892DB0038926D /* SHInteractiveAnimatedTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHInteractiveAnimatedTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				E793E378217861770038926D /* ViewController.m */,
 				E793E3A6217863250038926D /* ListViewController.h */,
 				E793E3A7217863250038926D /* ListViewController.m */,
+				E793E3AC217885150038926D /* AnimationCollectionViewFlowLayout.h */,
+				E793E3AD217885150038926D /* AnimationCollectionViewFlowLayout.m */,
+				E793E3AF217892DB0038926D /* SHInteractiveAnimatedTransition.h */,
+				E793E3B0217892DB0038926D /* SHInteractiveAnimatedTransition.m */,
 				E793E37A217861770038926D /* Main.storyboard */,
 				E793E37D217861780038926D /* Assets.xcassets */,
 				E793E37F217861780038926D /* LaunchScreen.storyboard */,
@@ -269,8 +279,10 @@
 			files = (
 				E793E379217861770038926D /* ViewController.m in Sources */,
 				E793E384217861780038926D /* main.m in Sources */,
+				E793E3AE217885150038926D /* AnimationCollectionViewFlowLayout.m in Sources */,
 				E793E3A8217863250038926D /* ListViewController.m in Sources */,
 				E793E376217861770038926D /* AppDelegate.m in Sources */,
+				E793E3B1217892DB0038926D /* SHInteractiveAnimatedTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
