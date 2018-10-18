@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E793E376217861770038926D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E375217861770038926D /* AppDelegate.m */; };
+		E793E379217861770038926D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E378217861770038926D /* ViewController.m */; };
+		E793E37C217861770038926D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E793E37A217861770038926D /* Main.storyboard */; };
+		E793E37E217861780038926D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E793E37D217861780038926D /* Assets.xcassets */; };
+		E793E381217861780038926D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E793E37F217861780038926D /* LaunchScreen.storyboard */; };
+		E793E384217861780038926D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E383217861780038926D /* main.m */; };
+		E793E38E217861780038926D /* SnapChatAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E38D217861780038926D /* SnapChatAnimationTests.m */; };
+		E793E399217861780038926D /* SnapChatAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E398217861780038926D /* SnapChatAnimationUITests.m */; };
+		E793E3A8217863250038926D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3A7217863250038926D /* ListViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E793E38A217861780038926D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E793E369217861770038926D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E793E370217861770038926D;
+			remoteInfo = SnapChatAnimation;
+		};
+		E793E395217861780038926D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E793E369217861770038926D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E793E370217861770038926D;
+			remoteInfo = SnapChatAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E793E371217861770038926D /* SnapChatAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChatAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E793E374217861770038926D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E793E375217861770038926D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E793E377217861770038926D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E793E378217861770038926D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E793E37B217861770038926D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E793E37D217861780038926D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E793E380217861780038926D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E793E382217861780038926D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E793E383217861780038926D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E793E389217861780038926D /* SnapChatAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapChatAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E793E38D217861780038926D /* SnapChatAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapChatAnimationTests.m; sourceTree = "<group>"; };
+		E793E38F217861780038926D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E793E394217861780038926D /* SnapChatAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapChatAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E793E398217861780038926D /* SnapChatAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapChatAnimationUITests.m; sourceTree = "<group>"; };
+		E793E39A217861780038926D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E793E3A6217863250038926D /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		E793E3A7217863250038926D /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E793E36E217861770038926D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E793E386217861780038926D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E793E391217861780038926D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E793E368217861770038926D = {
+			isa = PBXGroup;
+			children = (
+				E793E373217861770038926D /* SnapChatAnimation */,
+				E793E38C217861780038926D /* SnapChatAnimationTests */,
+				E793E397217861780038926D /* SnapChatAnimationUITests */,
+				E793E372217861770038926D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E793E372217861770038926D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E793E371217861770038926D /* SnapChatAnimation.app */,
+				E793E389217861780038926D /* SnapChatAnimationTests.xctest */,
+				E793E394217861780038926D /* SnapChatAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E793E373217861770038926D /* SnapChatAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E793E374217861770038926D /* AppDelegate.h */,
+				E793E375217861770038926D /* AppDelegate.m */,
+				E793E377217861770038926D /* ViewController.h */,
+				E793E378217861770038926D /* ViewController.m */,
+				E793E3A6217863250038926D /* ListViewController.h */,
+				E793E3A7217863250038926D /* ListViewController.m */,
+				E793E37A217861770038926D /* Main.storyboard */,
+				E793E37D217861780038926D /* Assets.xcassets */,
+				E793E37F217861780038926D /* LaunchScreen.storyboard */,
+				E793E382217861780038926D /* Info.plist */,
+				E793E383217861780038926D /* main.m */,
+			);
+			path = SnapChatAnimation;
+			sourceTree = "<group>";
+		};
+		E793E38C217861780038926D /* SnapChatAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				E793E38D217861780038926D /* SnapChatAnimationTests.m */,
+				E793E38F217861780038926D /* Info.plist */,
+			);
+			path = SnapChatAnimationTests;
+			sourceTree = "<group>";
+		};
+		E793E397217861780038926D /* SnapChatAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E793E398217861780038926D /* SnapChatAnimationUITests.m */,
+				E793E39A217861780038926D /* Info.plist */,
+			);
+			path = SnapChatAnimationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E793E370217861770038926D /* SnapChatAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E793E39D217861780038926D /* Build configuration list for PBXNativeTarget "SnapChatAnimation" */;
+			buildPhases = (
+				E793E36D217861770038926D /* Sources */,
+				E793E36E217861770038926D /* Frameworks */,
+				E793E36F217861770038926D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapChatAnimation;
+			productName = SnapChatAnimation;
+			productReference = E793E371217861770038926D /* SnapChatAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E793E388217861780038926D /* SnapChatAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E793E3A0217861780038926D /* Build configuration list for PBXNativeTarget "SnapChatAnimationTests" */;
+			buildPhases = (
+				E793E385217861780038926D /* Sources */,
+				E793E386217861780038926D /* Frameworks */,
+				E793E387217861780038926D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E793E38B217861780038926D /* PBXTargetDependency */,
+			);
+			name = SnapChatAnimationTests;
+			productName = SnapChatAnimationTests;
+			productReference = E793E389217861780038926D /* SnapChatAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E793E393217861780038926D /* SnapChatAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E793E3A3217861780038926D /* Build configuration list for PBXNativeTarget "SnapChatAnimationUITests" */;
+			buildPhases = (
+				E793E390217861780038926D /* Sources */,
+				E793E391217861780038926D /* Frameworks */,
+				E793E392217861780038926D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E793E396217861780038926D /* PBXTargetDependency */,
+			);
+			name = SnapChatAnimationUITests;
+			productName = SnapChatAnimationUITests;
+			productReference = E793E394217861780038926D /* SnapChatAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E793E369217861770038926D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = anglemiku.v;
+				TargetAttributes = {
+					E793E370217861770038926D = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E793E388217861780038926D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E793E370217861770038926D;
+					};
+					E793E393217861780038926D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E793E370217861770038926D;
+					};
+				};
+			};
+			buildConfigurationList = E793E36C217861770038926D /* Build configuration list for PBXProject "SnapChatAnimation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E793E368217861770038926D;
+			productRefGroup = E793E372217861770038926D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E793E370217861770038926D /* SnapChatAnimation */,
+				E793E388217861780038926D /* SnapChatAnimationTests */,
+				E793E393217861780038926D /* SnapChatAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E793E36F217861770038926D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E793E381217861780038926D /* LaunchScreen.storyboard in Resources */,
+				E793E37E217861780038926D /* Assets.xcassets in Resources */,
+				E793E37C217861770038926D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E793E387217861780038926D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E793E392217861780038926D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E793E36D217861770038926D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E793E379217861770038926D /* ViewController.m in Sources */,
+				E793E384217861780038926D /* main.m in Sources */,
+				E793E3A8217863250038926D /* ListViewController.m in Sources */,
+				E793E376217861770038926D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E793E385217861780038926D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E793E38E217861780038926D /* SnapChatAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E793E390217861780038926D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E793E399217861780038926D /* SnapChatAnimationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E793E38B217861780038926D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E793E370217861770038926D /* SnapChatAnimation */;
+			targetProxy = E793E38A217861780038926D /* PBXContainerItemProxy */;
+		};
+		E793E396217861780038926D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E793E370217861770038926D /* SnapChatAnimation */;
+			targetProxy = E793E395217861780038926D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E793E37A217861770038926D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E793E37B217861770038926D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E793E37F217861780038926D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E793E380217861780038926D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E793E39B217861780038926D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E793E39C217861780038926D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E793E39E217861780038926D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapChatAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miku.SnapChatAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E793E39F217861780038926D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapChatAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miku.SnapChatAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E793E3A1217861780038926D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapChatAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miku.SnapChatAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapChatAnimation.app/SnapChatAnimation";
+			};
+			name = Debug;
+		};
+		E793E3A2217861780038926D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapChatAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miku.SnapChatAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapChatAnimation.app/SnapChatAnimation";
+			};
+			name = Release;
+		};
+		E793E3A4217861780038926D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapChatAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miku.SnapChatAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapChatAnimation;
+			};
+			name = Debug;
+		};
+		E793E3A5217861780038926D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapChatAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.miku.SnapChatAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapChatAnimation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E793E36C217861770038926D /* Build configuration list for PBXProject "SnapChatAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E793E39B217861780038926D /* Debug */,
+				E793E39C217861780038926D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E793E39D217861780038926D /* Build configuration list for PBXNativeTarget "SnapChatAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E793E39E217861780038926D /* Debug */,
+				E793E39F217861780038926D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E793E3A0217861780038926D /* Build configuration list for PBXNativeTarget "SnapChatAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E793E3A1217861780038926D /* Debug */,
+				E793E3A2217861780038926D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E793E3A3217861780038926D /* Build configuration list for PBXNativeTarget "SnapChatAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E793E3A4217861780038926D /* Debug */,
+				E793E3A5217861780038926D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E793E369217861770038926D /* Project object */;
+}
