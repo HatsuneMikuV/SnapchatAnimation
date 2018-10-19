@@ -25,6 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.whiteColor;
+    self.navigationController.navigationBar.translucent = NO;
+
+    self.navigationItem.title = @"数据列表";
     
     self.dataArr = @[@"image0",
                      @"image1",
@@ -40,12 +43,18 @@
     
     [self setSubviews];
 }
-
 #pragma mark -
 #pragma mark   ==============setSubviews==============
 - (void)setSubviews
 {
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds];
+    CGFloat itemWidth = (self.view.bounds.size.width - 40) / 3;
+    
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(itemWidth, itemWidth);
+    layout.sectionInset = UIEdgeInsetsMake(20, 10, 20, 10);
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) collectionViewLayout:layout];
+    collectionView.backgroundColor = UIColor.whiteColor;
     collectionView.dataSource = self;
     collectionView.delegate = self;
     [collectionView registerClass:ListCollectionViewCell.class forCellWithReuseIdentifier:@"cell"];
@@ -83,7 +92,8 @@
     }
     
     if (viewController) {
-        [self presentViewController:viewController animated:YES completion:nil];
+        UINavigationController *nacVC = [[UINavigationController alloc] initWithRootViewController:viewController];
+        [self.navigationController presentViewController:nacVC animated:YES completion:nil];
     }
 }
 

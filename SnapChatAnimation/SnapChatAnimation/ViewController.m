@@ -23,6 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.navigationItem.title = @"转场动画";
+    self.navigationController.navigationBar.translucent = NO;
+    
     self.dataArr = @[@"左右滑动切换", @"向下滑动消失", @"左右切换向下消失"];
     
     [self setSubviews];
@@ -49,7 +52,9 @@
     
     if (indexPath.row < self.dataArr.count) {
         ListViewController *listVC = [[ListViewController alloc] init];
-        [self.navigationController presentViewController:listVC animated:YES completion:nil];
+        listVC.type = indexPath.row + 1;
+        UINavigationController *nacVC = [[UINavigationController alloc] initWithRootViewController:listVC];
+        [self.navigationController presentViewController:nacVC animated:YES completion:nil];
     }
 }
 #pragma mark -

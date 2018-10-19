@@ -16,6 +16,19 @@
 
 @implementation ListCollectionViewCell
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        [imageView setContentMode:(UIViewContentModeScaleAspectFit)];
+        [self.contentView addSubview:imageView];
+        self.imageView = imageView;
+    }
+    return self;
+}
+
 - (void)updateWithImage:(NSString *)imgUrl
 {
     [self.imageView setImage:[UIImage imageNamed:imgUrl]];
