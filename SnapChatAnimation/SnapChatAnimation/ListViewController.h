@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, SHTransitionStyle) {
+    SHTransitionStyleNone = 0,
+    SHTransitionStyleLeftRight,
+    SHTransitionStyleDown,
+    SHTransitionStyleLeftRightDown,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ListViewController : UIViewController
+
+@property (nonatomic, assign) SHTransitionStyle type;
 
 @end
 

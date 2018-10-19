@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E764449C2179C7240042A3E9 /* SHLeftRigntScrollLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E764449B2179C7240042A3E9 /* SHLeftRigntScrollLayout.m */; };
+		E764449F2179CC4A0042A3E9 /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E764449E2179CC4A0042A3E9 /* ListCollectionViewCell.m */; };
 		E793E376217861770038926D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E375217861770038926D /* AppDelegate.m */; };
 		E793E379217861770038926D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E378217861770038926D /* ViewController.m */; };
 		E793E37C217861770038926D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E793E37A217861770038926D /* Main.storyboard */; };
@@ -16,7 +18,6 @@
 		E793E38E217861780038926D /* SnapChatAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E38D217861780038926D /* SnapChatAnimationTests.m */; };
 		E793E399217861780038926D /* SnapChatAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E398217861780038926D /* SnapChatAnimationUITests.m */; };
 		E793E3A8217863250038926D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3A7217863250038926D /* ListViewController.m */; };
-		E793E3AE217885150038926D /* AnimationCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3AD217885150038926D /* AnimationCollectionViewFlowLayout.m */; };
 		E793E3B1217892DB0038926D /* SHInteractiveAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3B0217892DB0038926D /* SHInteractiveAnimatedTransition.m */; };
 		E793E3B4217896EC0038926D /* SHLScrollRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3B3217896EC0038926D /* SHLScrollRViewController.m */; };
 		E793E3B7217897030038926D /* SHScrollDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E793E3B6217897030038926D /* SHScrollDownViewController.m */; };
@@ -41,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E764449A2179C7240042A3E9 /* SHLeftRigntScrollLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHLeftRigntScrollLayout.h; sourceTree = "<group>"; };
+		E764449B2179C7240042A3E9 /* SHLeftRigntScrollLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHLeftRigntScrollLayout.m; sourceTree = "<group>"; };
+		E764449D2179CC4A0042A3E9 /* ListCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCollectionViewCell.h; sourceTree = "<group>"; };
+		E764449E2179CC4A0042A3E9 /* ListCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListCollectionViewCell.m; sourceTree = "<group>"; };
 		E793E371217861770038926D /* SnapChatAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChatAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E793E374217861770038926D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E793E375217861770038926D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,8 +64,6 @@
 		E793E39A217861780038926D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E793E3A6217863250038926D /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		E793E3A7217863250038926D /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		E793E3AC217885150038926D /* AnimationCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		E793E3AD217885150038926D /* AnimationCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		E793E3AF217892DB0038926D /* SHInteractiveAnimatedTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHInteractiveAnimatedTransition.h; sourceTree = "<group>"; };
 		E793E3B0217892DB0038926D /* SHInteractiveAnimatedTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHInteractiveAnimatedTransition.m; sourceTree = "<group>"; };
 		E793E3B2217896EC0038926D /* SHLScrollRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHLScrollRViewController.h; sourceTree = "<group>"; };
@@ -125,8 +128,10 @@
 				E793E378217861770038926D /* ViewController.m */,
 				E793E3A6217863250038926D /* ListViewController.h */,
 				E793E3A7217863250038926D /* ListViewController.m */,
-				E793E3AC217885150038926D /* AnimationCollectionViewFlowLayout.h */,
-				E793E3AD217885150038926D /* AnimationCollectionViewFlowLayout.m */,
+				E764449D2179CC4A0042A3E9 /* ListCollectionViewCell.h */,
+				E764449E2179CC4A0042A3E9 /* ListCollectionViewCell.m */,
+				E764449A2179C7240042A3E9 /* SHLeftRigntScrollLayout.h */,
+				E764449B2179C7240042A3E9 /* SHLeftRigntScrollLayout.m */,
 				E793E3AF217892DB0038926D /* SHInteractiveAnimatedTransition.h */,
 				E793E3B0217892DB0038926D /* SHInteractiveAnimatedTransition.m */,
 				E793E3B2217896EC0038926D /* SHLScrollRViewController.h */,
@@ -294,11 +299,12 @@
 			files = (
 				E793E3B7217897030038926D /* SHScrollDownViewController.m in Sources */,
 				E793E379217861770038926D /* ViewController.m in Sources */,
+				E764449F2179CC4A0042A3E9 /* ListCollectionViewCell.m in Sources */,
 				E793E384217861780038926D /* main.m in Sources */,
-				E793E3AE217885150038926D /* AnimationCollectionViewFlowLayout.m in Sources */,
 				E793E3A8217863250038926D /* ListViewController.m in Sources */,
 				E793E3BA2178974A0038926D /* SHLFDViewController.m in Sources */,
 				E793E376217861770038926D /* AppDelegate.m in Sources */,
+				E764449C2179C7240042A3E9 /* SHLeftRigntScrollLayout.m in Sources */,
 				E793E3B1217892DB0038926D /* SHInteractiveAnimatedTransition.m in Sources */,
 				E793E3B4217896EC0038926D /* SHLScrollRViewController.m in Sources */,
 			);

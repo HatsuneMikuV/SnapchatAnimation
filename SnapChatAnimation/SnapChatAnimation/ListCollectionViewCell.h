@@ -1,8 +1,8 @@
 //
-//  AnimationCollectionViewFlowLayout.h
+//  ListCollectionViewCell.h
 //  SnapChatAnimation
 //
-//  Created by Joe.l on 2018/10/18.
+//  Created by Joe.l on 2018/10/19.
 //  Copyright © 2018年 anglemiku.v. All rights reserved.
 //
 
@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AnimationCollectionViewFlowLayout : UICollectionViewFlowLayout
+@interface ListCollectionViewCell : UICollectionViewCell
+
+- (void)updateWithImage:(NSString *)imgUrl;
 
 @end
 

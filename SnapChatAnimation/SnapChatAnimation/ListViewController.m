@@ -7,8 +7,15 @@
 //
 
 #import "ListViewController.h"
+#import "ListCollectionViewCell.h"
 
-@interface ListViewController ()
+#import "SHScrollDownViewController.h"
+#import "SHLFDViewController.h"
+#import "SHLScrollRViewController.h"
+
+@interface ListViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -19,6 +26,65 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.whiteColor;
     
+    self.dataArr = @[@"image0",
+                     @"image1",
+                     @"image2",
+                     @"image3",
+                     @"image4",
+                     @"image5",
+                     @"image6",
+                     @"image7",
+                     @"image8",
+                     @"image9",
+                     @"image10"];
+    
+    [self setSubviews];
+}
+
+#pragma mark -
+#pragma mark   ==============setSubviews==============
+- (void)setSubviews
+{
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds];
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    [collectionView registerClass:ListCollectionViewCell.class forCellWithReuseIdentifier:@"cell"];
+    [self.view addSubview:collectionView];
+    [collectionView reloadData];
+}
+#pragma mark -
+#pragma mark   ==============UICollectionViewDataSource==============
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.dataArr.count;
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    if (indexPath.item < self.dataArr.count) {
+        [cell updateWithImage:self.dataArr[indexPath.item]];
+    }
+    return cell;
+}
+#pragma mark -
+#pragma mark   ==============UICollectionViewDelegate==============
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    UIViewController *viewController = nil;
+    
+    if (self.type == SHTransitionStyleLeftRight) {
+        viewController = [[SHLScrollRViewController alloc] init];
+    } else if (self.type == SHTransitionStyleDown) {
+        viewController = [[SHScrollDownViewController alloc] init];
+    } else if (self.type == SHTransitionStyleLeftRightDown) {
+        viewController = [[SHLFDViewController alloc] init];
+    }
+    
+    if (viewController) {
+        [self presentViewController:viewController animated:YES completion:nil];
+    }
 }
 
 /*
