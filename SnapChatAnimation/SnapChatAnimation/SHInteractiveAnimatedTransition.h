@@ -7,10 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+typedef NS_ENUM(NSInteger, SHInteractiveShowStyle) {
+    SHInteractiveShowStylePresent = 0,
+    SHInteractiveShowStyleDissmiss,
+    SHInteractiveShowStylePush,
+    SHInteractiveShowStylePop,
+};
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SHInteractiveAnimatedTransition : NSObject
+@interface SHInteractiveAnimatedTransition : NSObject<UIViewControllerAnimatedTransitioning>
+
+@property (nonatomic, assign) SHInteractiveShowStyle transitionType;
 
 @end
 

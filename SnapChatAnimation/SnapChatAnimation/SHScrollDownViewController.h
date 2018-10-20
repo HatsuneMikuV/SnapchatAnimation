@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SHScrollDownViewController : UIViewController
 
+@property (nonatomic, copy) NSString *imageUrl;
+
+@property (nonatomic, strong, readonly) UIView *backView;
+
 @end
 
 NS_ASSUME_NONNULL_END

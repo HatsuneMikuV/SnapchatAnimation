@@ -16,6 +16,7 @@
 @interface ListViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) NSArray *dataArr;
+@property (nonatomic, strong) UICollectionView *collectioView;
 
 @end
 
@@ -60,6 +61,7 @@
     [collectionView registerClass:ListCollectionViewCell.class forCellWithReuseIdentifier:@"cell"];
     [self.view addSubview:collectionView];
     [collectionView reloadData];
+    self.collectioView = collectionView;
 }
 #pragma mark -
 #pragma mark   ==============UICollectionViewDataSource==============
@@ -95,6 +97,22 @@
         UINavigationController *nacVC = [[UINavigationController alloc] initWithRootViewController:viewController];
         [self.navigationController presentViewController:nacVC animated:YES completion:nil];
     }
+}
+
+#pragma mark -
+#pragma mark   ==============Public==============
+- (UIView *)getCurentCell:(NSInteger)index
+{
+    UIView *cell = [self.collectioView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+    if (cell == nil) {
+        for (NSIndexPath *indexPath in self.collectioView.indexPathsForVisibleItems) {
+            if (index == indexPath.item) {
+                cell = [self.collectioView cellForItemAtIndexPath:indexPath];
+                break;
+            }
+        }
+    }
+    return cell;
 }
 
 /*
