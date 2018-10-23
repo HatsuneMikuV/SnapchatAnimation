@@ -8,7 +8,15 @@
 
 #import "SHLFDViewController.h"
 
-@interface SHLFDViewController ()
+#import "ListCollectionViewCell.h"
+#import "SHLeftRigntScrollLayout.h"
+#import "SHInteractiveAnimatedTransition.h"
+
+@interface SHLFDViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, SHLeftRigntScrollLayoutDelegate, UIViewControllerTransitioningDelegate>
+
+@property (nonatomic, strong) NSArray *dataArr;
+
+@property (nonatomic, strong) SHInteractiveAnimatedTransition *transitionAnimation;
 
 @end
 
