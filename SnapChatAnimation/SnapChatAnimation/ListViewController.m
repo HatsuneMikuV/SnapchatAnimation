@@ -27,6 +27,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.whiteColor;
     self.navigationController.navigationBar.translucent = NO;
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:(UIBarButtonItemStyleDone) target:self action:@selector(backClick)];
 
     self.navigationItem.title = @"数据列表";
     
@@ -43,6 +45,16 @@
                      @"image10"];
     
     [self setSubviews];
+}
+#pragma mark -
+#pragma mark   ==============Actions==============
+- (void)backClick
+{
+    if (self.navigationController.viewControllers.count > 1) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else {
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 #pragma mark -
 #pragma mark   ==============setSubviews==============
