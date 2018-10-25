@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSArray *dataArr;
 
+@property (nonatomic, strong, readonly) UICollectionView *backView;
+@property (nonatomic, assign, readonly) CGRect imageFrame;
+@property (nonatomic, assign) NSInteger curIndex;
+
+@property (nonatomic, copy) void(^updateCurIndex)(NSInteger curIndex);
+
 @end
 
 NS_ASSUME_NONNULL_END

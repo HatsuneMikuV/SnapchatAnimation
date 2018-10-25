@@ -10,6 +10,7 @@
 
 #import "ListViewController.h"
 #import "SHScrollDownViewController.h"
+#import "SHLFDViewController.h"
 
 @interface SHInteractiveAnimatedTransition ()
 
@@ -31,7 +32,7 @@
     SHScrollDownViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 
     //获取点击的cell
-    UIView *fromView = [fromVC getCurentCell:fromVC.curIndex];
+    UIView *fromView = [fromVC getCurentCell];
     
     //这里有个重要的概念containerView，如果要对视图做转场动画，视图就必须要加入containerView中才能进行，可以理解containerView管理着所有做转场动画的视图
     UIView *containerView = transitionContext.containerView;
@@ -51,9 +52,13 @@
     }
     
     //开始做动画
+    CGRect newFrame = toVC.backView.frame;
+    if ([toVC isKindOfClass:[SHLFDViewController class]]) {
+        newFrame = [(SHLFDViewController *)toVC imageFrame];
+    }
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     [UIView animateWithDuration:duration animations:^{
-        tempView.frame = toVC.backView.frame;
+        tempView.frame = newFrame;
         toVC.view.alpha = 1;
     } completion:^(BOOL finished) {
         [tempView removeFromSuperview];
@@ -75,7 +80,7 @@
     
     
     //获取点击的cell
-    UIView *toView = [toVC getCurentCell:toVC.curIndex];
+    UIView *toView = [toVC getCurentCell];
     
     UIView *containerView = transitionContext.containerView;
     

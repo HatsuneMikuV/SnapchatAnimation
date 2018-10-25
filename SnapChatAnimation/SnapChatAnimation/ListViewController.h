@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger curIndex;
 
-- (UIView *)getCurentCell:(NSInteger)index;
+- (UIView *)getCurentCell;
 
 @end
 

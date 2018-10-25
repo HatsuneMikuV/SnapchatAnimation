@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSArray *dataArr;
 
+@property (nonatomic, assign) NSInteger curIndex;
+
 @end
 
 NS_ASSUME_NONNULL_END

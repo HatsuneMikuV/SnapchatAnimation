@@ -72,6 +72,10 @@
     [collectionView registerClass:ListCollectionViewCell.class forCellWithReuseIdentifier:@"cell"];
     [self.view addSubview:collectionView];
     [collectionView reloadData];
+    
+    if (self.curIndex > 0) {
+        [collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.curIndex inSection:0] atScrollPosition:(UICollectionViewScrollPositionLeft) animated:NO];
+    }
 }
 #pragma mark -
 #pragma mark   ==============UICollectionViewDataSource==============

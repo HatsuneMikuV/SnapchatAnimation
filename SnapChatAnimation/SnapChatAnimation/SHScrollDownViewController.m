@@ -34,6 +34,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.view.backgroundColor = UIColor.blackColor;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width)];
+    [imageView setImage:[UIImage imageNamed:self.imageUrl]];
+    imageView.center = self.view.center;
+    [self.view addSubview:imageView];
+    _backView = imageView;
     
     CGFloat width = self.view.bounds.size.width;
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(width * 0.5 - 60, 20, 120, 44)];
@@ -55,14 +63,6 @@
     backBtn.layer.cornerRadius = 22;
     [self.view addSubview:backBtn];
     self.backBtn = backBtn;
-
-    self.view.backgroundColor = UIColor.blackColor;
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width)];
-    [imageView setImage:[UIImage imageNamed:self.imageUrl]];
-    imageView.center = self.view.center;
-    [self.view addSubview:imageView];
-    _backView = imageView;
     
     UIPanGestureRecognizer *tap = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(interactiveTransitionRecognizer:)];
     [self.view addGestureRecognizer:tap];
