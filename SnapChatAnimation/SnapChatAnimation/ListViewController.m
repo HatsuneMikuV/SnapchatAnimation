@@ -98,16 +98,22 @@
     UIViewController *viewController = nil;
     
     if (self.type == SHTransitionStyleLeftRight) {
-        viewController = [[SHLScrollRViewController alloc] init];
+        SHLScrollRViewController *vc = [[SHLScrollRViewController alloc] init];
+        vc.dataArr = self.dataArr;
+        viewController = vc;
     } else if (self.type == SHTransitionStyleDown) {
-        viewController = [[SHScrollDownViewController alloc] init];
+        SHScrollDownViewController *vc = [[SHScrollDownViewController alloc] init];
+        vc.imageUrl = self.dataArr[indexPath.item];
+        viewController = vc;
     } else if (self.type == SHTransitionStyleLeftRightDown) {
-        viewController = [[SHLFDViewController alloc] init];
+        SHLFDViewController *vc = [[SHLFDViewController alloc] init];
+        vc.dataArr = self.dataArr;
+        viewController = vc;
     }
     
     if (viewController) {
-        UINavigationController *nacVC = [[UINavigationController alloc] initWithRootViewController:viewController];
-        [self.navigationController presentViewController:nacVC animated:YES completion:nil];
+        self.curIndex = indexPath.item;
+        [self presentViewController:viewController animated:YES completion:nil];
     }
 }
 

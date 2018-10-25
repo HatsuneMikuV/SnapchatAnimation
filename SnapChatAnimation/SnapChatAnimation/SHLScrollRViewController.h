@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SHLScrollRViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *dataArr;
+
 @end
 
 NS_ASSUME_NONNULL_END

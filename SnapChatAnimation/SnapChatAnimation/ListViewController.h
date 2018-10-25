@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) SHTransitionStyle type;
 
+@property (nonatomic, assign) NSInteger curIndex;
+
 - (UIView *)getCurentCell:(NSInteger)index;
 
 @end

@@ -14,8 +14,6 @@
 
 @interface SHLFDViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, SHLeftRigntScrollLayoutDelegate, UIViewControllerTransitioningDelegate>
 
-@property (nonatomic, strong) NSArray *dataArr;
-
 @property (nonatomic, strong) SHInteractiveAnimatedTransition *transitionAnimation;
 
 @end

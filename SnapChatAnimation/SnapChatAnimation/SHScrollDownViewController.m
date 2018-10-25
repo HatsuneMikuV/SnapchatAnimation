@@ -12,6 +12,8 @@
 @interface SHScrollDownViewController ()<UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) SHInteractiveAnimatedTransition *transitionAnimation;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIButton *backBtn;
 
 @end
 
@@ -32,20 +34,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationItem.title = @"向下滑动消失";
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:(UIBarButtonItemStyleDone) target:self action:@selector(backClick)];
+    CGFloat width = self.view.bounds.size.width;
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(width * 0.5 - 60, 20, 120, 44)];
+    titleLabel.text = @"向下滑动消失";
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor = UIColor.whiteColor;
+    titleLabel.backgroundColor = UIColor.orangeColor;
+    titleLabel.clipsToBounds = YES;
+    titleLabel.layer.cornerRadius = 22;
+    [self.view addSubview:titleLabel];
+    self.titleLabel = titleLabel;
     
-    self.view.backgroundColor = UIColor.whiteColor;
+    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 44, 44)];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [backBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    backBtn.backgroundColor = UIColor.orangeColor;
+    backBtn.clipsToBounds = YES;
+    backBtn.layer.cornerRadius = 22;
+    [self.view addSubview:backBtn];
+    self.backBtn = backBtn;
+
+    self.view.backgroundColor = UIColor.blackColor;
     
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width)];
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:backView.bounds];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width)];
     [imageView setImage:[UIImage imageNamed:self.imageUrl]];
-    [backView addSubview:imageView];
-    [self.view addSubview:self.backView];
-    _backView = backView;
+    imageView.center = self.view.center;
+    [self.view addSubview:imageView];
+    _backView = imageView;
     
     UIPanGestureRecognizer *tap = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(interactiveTransitionRecognizer:)];
     [self.view addGestureRecognizer:tap];
@@ -57,7 +74,7 @@
     if (self.navigationController.viewControllers.count > 1) {
         [self.navigationController popViewControllerAnimated:YES];
     }else {
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 - (void)interactiveTransitionRecognizer:(UIPanGestureRecognizer *)gestureRecognizer
@@ -88,7 +105,7 @@
 - (void)gestureRecognizerComplete:(CGFloat)scale
 {
     if (scale < 0.75) {
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        [self backClick];
     }else {
         [UIView animateWithDuration:0.25 animations:^{
             self.view.backgroundColor = UIColor.blackColor;
@@ -108,6 +125,7 @@
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
+    self.transitionAnimation.transitionType = SHInteractiveShowStyleDissmiss;
     return self.transitionAnimation;
 }
 

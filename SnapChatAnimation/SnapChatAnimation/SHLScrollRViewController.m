@@ -12,7 +12,8 @@
 
 @interface SHLScrollRViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, SHLeftRigntScrollLayoutDelegate>
 
-@property (nonatomic, strong) NSArray *dataArr;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIButton *backBtn;
 
 @end
 
@@ -21,25 +22,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationItem.title = @"左右滑动";
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:(UIBarButtonItemStyleDone) target:self action:@selector(backClick)];
-    
     self.view.backgroundColor = UIColor.whiteColor;
-    self.dataArr = @[@"image0",
-                     @"image1",
-                     @"image2",
-                     @"image3",
-                     @"image4",
-                     @"image5",
-                     @"image6",
-                     @"image7",
-                     @"image8",
-                     @"image9",
-                     @"image10"];
     
     [self setSubviews];
+
+    CGFloat width = self.view.bounds.size.width;
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(width * 0.5 - 60, 20, 120, 44)];
+    titleLabel.text = @"左右滑动";
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor = UIColor.whiteColor;
+    titleLabel.backgroundColor = UIColor.orangeColor;
+    titleLabel.clipsToBounds = YES;
+    titleLabel.layer.cornerRadius = 22;
+    [self.view addSubview:titleLabel];
+    self.titleLabel = titleLabel;
+    
+    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 44, 44)];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [backBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    backBtn.backgroundColor = UIColor.orangeColor;
+    backBtn.clipsToBounds = YES;
+    backBtn.layer.cornerRadius = 22;
+    [self.view addSubview:backBtn];
+    self.backBtn = backBtn;
 }
 #pragma mark -
 #pragma mark   ==============Actions==============
@@ -48,7 +54,7 @@
     if (self.navigationController.viewControllers.count > 1) {
         [self.navigationController popViewControllerAnimated:YES];
     }else {
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 #pragma mark -
@@ -88,14 +94,21 @@
 {
     if (scale > 0.35) {
         CGFloat alpha = 5.0 / 3 * scale - 2.0 / 3;
-        [self.navigationController.navigationBar setAlpha:alpha];
+        self.titleLabel.alpha = alpha;
+        self.backBtn.alpha = alpha;
     }else {
-        [self.navigationController.navigationBar setAlpha:0];
+        self.titleLabel.alpha = 0;
+        self.backBtn.alpha = 0;
     }
-    CGRect frame = self.navigationController.navigationBar.frame;
+    CGRect frame = self.titleLabel.frame;
     //20  状态栏的高度，请根据机型获取
     frame.origin.y = 20 + (scale - 1) * 44;
-    self.navigationController.navigationBar.frame = frame;
+    self.titleLabel.frame = frame;
+    
+    frame = self.backBtn.frame;
+    //20  状态栏的高度，请根据机型获取
+    frame.origin.y = 20 + (scale - 1) * 44;
+    self.backBtn.frame = frame;
 }
 /*
 #pragma mark - Navigation
